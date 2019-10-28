@@ -1,0 +1,39 @@
+version: '2.1'
+services:
+  mediun_api:
+    build: .
+    environment:
+      PORT: '5000'
+      SHOW_URLS: 'true'
+      COMMON_URL: '192.168.0.13'
+      
+      #MS_CRYPTO_VARIABLES
+      CRYPTO_URL: '192.168.0.13'
+      CRYPTO_PORT: '6001'
+      CRYPTO_ENTRY: 'users'
+      #MS_CONFIRMATION_VARIABLES
+      CONFIRMATION_URL: '192.168.0.13'
+      CONFIRMATION_PORT: '6002'
+      CONFIRMATION_USERS_ENTRY: 'users'
+      #MS_AUTH_VARIABLES
+      AUTH_URL: '192.168.0.14'
+      AUTH_PORT: '6003'
+      AUTH_ENTRY: 'sa-auth-ms/resources/users'
+      #MS_NOTIF_VARIABLES
+      NOTIF_URL: '192.168.0.13'
+      NOTIF_PORT: '6004'
+      NOTIF_ENTRY: 'users'
+      #MS_APPOINTMENT_VARIABLES
+      APPOINTMENT_URL: '192.168.0.13'
+      APPOINTMENT_PORT: '6005'
+      APPOINTMENT_ENTRY: 'users'
+      #MS_EXCUSES_VARIABLES
+      EXCUSES_URL: '192.168.0.13'
+      EXCUSES_PORT: '6006'
+      EXCUSES_ENTRY: 'users'
+      #MS_USERS_VARIABLES
+      USERS_URL: '192.168.0.13'
+      USERS_PORT: '6007'
+      USERS_ENTRY: 'users'
+    ports:
+      - '5000:5000'
