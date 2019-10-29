@@ -7,16 +7,16 @@ const resolvers = {
 	Query: {
 		allExcuses: (_) =>
 			getRequest(URL, ''),
-		//userById: (_, { id }) =>
-		//	generalRequest(`${URL}/${id}`, 'GET'),
+		excuseById: (_, { id }) =>
+			generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createExcuse: (_, { user }) =>
-			generalRequest(`${URL}/new`, 'POST', user),
-		//updateUser: (_, { id, user }) =>
-		//	generalRequest(`${URL}/${id}`, 'PUT', user),
-		//deleteUser: (_, { id }) =>
-		//	generalRequest(`${URL}/${id}`, 'DELETE')
+		createExcuse: (_, { excuse }) =>
+			generalRequest(`${URL}/new`, 'POST', excuse),
+		updateExcuse: (_, { id, excuse }) =>
+		generalRequest(`${URL}/${id}`, 'PUT', excuse),
+		deleteExcuse: (_, { id }) =>
+			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };
 

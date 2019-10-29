@@ -22,8 +22,11 @@ input ExcuseInput {
 
 export const excusesQueries = `
     allExcuses: [Excuse]!
+    excuseById(id: Int!): Excuse!
 `;
 
 export const excusesMutations = `
     createExcuse(excuse: ExcuseInput!): Excuse!
+    updateExcuse(id: Int!, excuse: ExcuseInput!): Excuse!
+    deleteExcuse(id: Int!): Int
 `;
