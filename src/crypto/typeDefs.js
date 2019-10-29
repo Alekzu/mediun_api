@@ -13,9 +13,9 @@ type ConfirmInput {
 }`;
 
 export const cryptoQueries = `
-    allConfirm: [Confirm]!
+    allCrypto: [Confirm]!
 `;
 
 export const cryptoMutations = `
-    createConfirm(confirm: ConfirmInput!): User!
+    createCrypto(confirm: ConfirmInput!): Confirm!
 `;

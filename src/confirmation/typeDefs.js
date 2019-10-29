@@ -1,4 +1,4 @@
-export const usersTypeDef = `
+export const confirmationTypeDef = `
 type User {
     name: String!
     email: String!
@@ -10,10 +10,10 @@ input UserInput {
     date: String!
 }`;
 
-export const usersQueries = `
+export const confirmationQueries = `
     allUsers: [User]!
 `;
 
-export const usersMutations = `
+export const confirmationMutations = `
     createUser(user: UserInput!): User!
 `;
