@@ -15,7 +15,7 @@ export const authQueries = `
 `;
 
 export const authMutations = `
-    createAuth(user: AuthUserInput!): AuthUser!
+    createAuth(user: AuthUserInput!): AuthUser
     updateAuth(id: Int!, user: AuthUserInput!): AuthUser!
     deleteAuth(id: Int!): Int
 `;

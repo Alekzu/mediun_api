@@ -11,7 +11,8 @@ input NotifUserInput {
 }`;
 
 export const notifQueries = `
-    allNotif: [NotifUser]!
+    allNotif: NotifUser!
+    notifById(id: Int!): NotifUser!
 `;
 
 export const notifMutations = `
