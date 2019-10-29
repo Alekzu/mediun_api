@@ -1,11 +1,15 @@
 export const cryptoTypeDef = `
-type Confirm {
+type Crypto {
     user: String!
     date: Date!
     created: Date!
     key: String!
 }
-type ConfirmInput {
+type FilterInput {
+    adate: Date!
+    bdate: Date!
+}
+type CryptoInput {
     user: String!
     date: Date!
     created: Date!
@@ -13,9 +17,10 @@ type ConfirmInput {
 }`;
 
 export const cryptoQueries = `
-    allConfirm: [Confirm]!
+    allCryptos: [Crypto]!
+    cryptosbyDate(dates: FilterInput!): [Crypto]!
 `;
 
 export const cryptoMutations = `
-    createConfirm(confirm: ConfirmInput!): User!
+    createCrypto(crypto: CryptoInput!): Crypto!
 `;
