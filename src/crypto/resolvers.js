@@ -5,14 +5,14 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allCrypto: (_) =>
-			getRequest(URL, ''),
-		//userById: (_, { id }) =>
-		//	generalRequest(`${URL}/${id}`, 'GET'),
+		allCryptos: (_) =>
+			generalRequest(`${URL}/crypto`, 'GET'),
+		cryptosbyDate: (_, { dates }) =>
+			generalRequest(`${URL}/crypto/{id:[0-9]+}`, 'GET', dates),
 	},
 	Mutation: {
-		createCrypto: (_, { user }) =>
-			generalRequest(`${URL}/new`, 'POST', confirm),
+		createCrypto: (_, { crypto }) =>
+			generalRequest(`${URL}/crypto`, 'POST', crypto),
 		//updateUser: (_, { id, user }) =>
 		//	generalRequest(`${URL}/${id}`, 'PUT', user),
 		//deleteUser: (_, { id }) =>
