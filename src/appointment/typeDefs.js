@@ -1,19 +1,19 @@
 export const appointmentTypeDef = `
-type User {
+type aUser {
     name: String!
     email: String!
     date: String!
 }
-input UserInput {
+input aUserInput {
     name: String!
     email: String!
     date: String!
 }`;
 
 export const appointmentQueries = `
-    allUsers: [User]!
+    allaUsers: [aUser]!
 `;
 
 export const appointmentMutations = `
-    createUser(user: UserInput!): User!
+    createaUser(user: aUserInput!): aUser!
 `;

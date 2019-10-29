@@ -5,13 +5,13 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allUsers: (_) =>
+		allExcuses: (_) =>
 			getRequest(URL, ''),
 		//userById: (_, { id }) =>
 		//	generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createUser: (_, { user }) =>
+		createExcuse: (_, { user }) =>
 			generalRequest(`${URL}/new`, 'POST', user),
 		//updateUser: (_, { id, user }) =>
 		//	generalRequest(`${URL}/${id}`, 'PUT', user),

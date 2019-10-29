@@ -1,19 +1,19 @@
 export const confirmationTypeDef = `
-type User {
+type cUser {
     name: String!
     email: String!
     date: String!
 }
-input UserInput {
+input cUserInput {
     name: String!
     email: String!
     date: String!
 }`;
 
 export const confirmationQueries = `
-    allUsers: [User]!
+    allcUsers: [cUser]!
 `;
 
 export const confirmationMutations = `
-    createUser(user: UserInput!): User!
+    createcUser(user: cUserInput!): cUser!
 `;

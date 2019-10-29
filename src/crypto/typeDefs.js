@@ -1,15 +1,23 @@
 export const cryptoTypeDef = `
+
+scalar Date
+
+type MyType {
+   created: Date
+}
+
+
 type Crypto {
     user: String!
     date: Date!
     created: Date!
     key: String!
 }
-type FilterInput {
+input FilterInput {
     adate: Date!
     bdate: Date!
 }
-type CryptoInput {
+input CryptoInput {
     user: String!
     date: Date!
     created: Date!

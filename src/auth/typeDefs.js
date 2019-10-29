@@ -1,21 +1,21 @@
 export const authTypeDef = `
-type User {
+type AuthUser {
     name: String!
     email: String!
     password: String!
 }
-input UserInput {
+input AuthUserInput {
     name: String!
     email: String!
     password: String!
 }`;
 
 export const authQueries = `
-    allAuthUsers: [User]!
+    allAuthUsers: [AuthUser]!
 `;
 
 export const authMutations = `
-    createAuth(user: UserInput!): User!
-    updateAuth(id: Int!, user: UserInput!): User!
+    createAuth(user: AuthUserInput!): AuthUser!
+    updateAuth(id: Int!, user: AuthUserInput!): AuthUser!
     deleteAuth(id: Int!): Int
 `;

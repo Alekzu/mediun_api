@@ -5,14 +5,14 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allUsers: (_) =>
+		allNotif: (_) =>
 			getRequest(URL, ''),
 		//userById: (_, { id }) =>
 		//	generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createUser: (_, { user }) =>
-			generalRequest(`${URL}/new`, 'POST', user),
+		createNotif: (_, { user }) =>
+			generalRequest(`${URL}/new`, '', user),
 		//updateUser: (_, { id, user }) =>
 		//	generalRequest(`${URL}/${id}`, 'PUT', user),
 		//deleteUser: (_, { id }) =>

@@ -1,19 +1,19 @@
 export const notifTypeDef = `
-type User {
+type NotifUser {
     name: String!
     email: String!
     date: String!
 }
-input UserInput {
+input NotifUserInput {
     name: String!
     email: String!
     date: String!
 }`;
 
 export const notifQueries = `
-    allNotif: [User]!
+    allNotif: [NotifUser]!
 `;
 
 export const notifMutations = `
-    createNotif(user: UserInput!): User!
+    createNotif(user: NotifUserInput!): NotifUser!
 `;
