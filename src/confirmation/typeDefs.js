@@ -1,19 +1,25 @@
 export const confirmationTypeDef = `
-type cUser {
-    name: String!
-    email: String!
-    date: String!
+type Confirmation {
+    confirmationId: Int!
+    appointmentId: String!
+    show: Int!
+    patienceId: String!
+    doctorId: String!
 }
-input cUserInput {
-    name: String!
-    email: String!
-    date: String!
+input ConfirmationInput {
+    appointmentId: String!
+    show: Int!
+    patienceId: String!
+    doctorId: String!
 }`;
 
 export const confirmationQueries = `
-    allcUsers: [cUser]!
+    allUsers: [Confirmation]!
+    userById(id: Int!): Confirmation!
 `;
 
 export const confirmationMutations = `
-    createcUser(user: cUserInput!): cUser!
+    createConfirmation(Confirmation: ConfirmationInput!): Confirmation!
+    updateConfirmation(id: Int!, Confirmation: ConfirmationInput!): Confirmation!
+    deleteConfirmation(id: Int!): Int!
 `;
