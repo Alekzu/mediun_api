@@ -13,9 +13,9 @@ const resolvers = {
 	Mutation: {
 		createSchedule: (_, { sch }) =>
 			generalRequest(`${URL}/new`, 'POST', sch),
-		updateUser: (_, { id, sch }) =>
+		updateSchedule: (_, { id, sch }) =>
 			generalRequest(`${URL}/${id}`, 'PUT', sch),
-		deleteUser: (_, { id }) =>
+		deleteSchedule: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };

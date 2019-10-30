@@ -5,9 +5,9 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allUsers: (_) =>
+		allConfirmation: (_) =>
 			getRequest(URL, ''),
-		userById: (_, { id }) =>
+		confirmationById: (_, { id }) =>
 			generalRequest(`userById?id=${id}`, 'GET'),
 	},
 	Mutation: {

@@ -8,11 +8,11 @@ services:
       COMMON_URL: '192.168.0.13'
       
       #MS_CRYPTO_VARIABLES
-      CRYPTO_URL: '192.168.0.13'
+      CRYPTO_URL: '35.240.32.29'
       CRYPTO_PORT: '5001'
-      CRYPTO_ENTRY: 'users'
+      CRYPTO_ENTRY: 'crypto'
       #MS_CONFIRMATION_VARIABLES
-      CONFIRMATION_URL: '192.168.0.13'
+      CONFIRMATION_URL: '35.203.125.249'
       CONFIRMATION_PORT: '5002'
       CONFIRMATION_USERS_ENTRY: 'api/confirmation'
       #MS_AUTH_VARIABLES
@@ -20,17 +20,17 @@ services:
       AUTH_PORT: '5003'
       AUTH_ENTRY: 'sa-auth-ms/resources/users'
       #MS_NOTIF_VARIABLES
-      NOTIF_URL: '192.168.0.13'
+      NOTIF_URL: '35.234.173.101'
       NOTIF_PORT: '5004'
       NOTIF_ENTRY: 'users'
       #MS_APPOINTMENT_VARIABLES
-      APPOINTMENT_URL: '192.168.0.13'
+      APPOINTMENT_URL: '34.74.190.194'
       APPOINTMENT_PORT: '5005'
       APPOINTMENT_ENTRY: 'schedules'
       #MS_EXCUSES_VARIABLES
-      EXCUSES_URL: '192.168.0.13'
+      EXCUSES_URL: '34.83.81.244'
       EXCUSES_PORT: '5006'
-      EXCUSES_ENTRY: 'users'
+      EXCUSES_ENTRY: 'medical_excuses'
       #MS_USERS_VARIABLES
       USERS_URL: '192.168.0.13'
       USERS_PORT: '5007'

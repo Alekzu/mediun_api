@@ -14,8 +14,8 @@ input ConfirmationInput {
 }`;
 
 export const confirmationQueries = `
-    allUsers: [Confirmation]!
-    userById(id: Int!): Confirmation!
+    allConfirmation: [Confirmation]!
+    confirmationById(id: Int!): Confirmation!
 `;
 
 export const confirmationMutations = `
