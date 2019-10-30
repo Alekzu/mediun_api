@@ -1,19 +1,27 @@
 export const appointmentTypeDef = `
-type aUser {
-    name: String!
-    email: String!
+type schedule {
+    patient: String!
     date: String!
+    doctor: String!
+    specialism: String!
+    code: String!
+    available: Boolean!
 }
-input aUserInput {
-    name: String!
-    email: String!
+input aScheduleInput {
+    patient: String!
     date: String!
+    doctor: String!
+    specialism: String!
+    code: String!
+    available: Boolean!
 }`;
 
 export const appointmentQueries = `
-    allaUsers: [aUser]!
+    allschedules: [schedule]!
 `;
 
 export const appointmentMutations = `
-    createaUser(user: aUserInput!): aUser!
+    createSchedule(sch: aScheduleInput!): schedule!
+    updateSchedule(id: Int!, sch: aScheduleInput!): schedule!
+    deleteSchedule(id: Int!): Int!
 `;

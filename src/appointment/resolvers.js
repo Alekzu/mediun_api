@@ -5,18 +5,18 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 
 const resolvers = {
 	Query: {
-		allaUsers: (_) =>
+		allschedules: (_) =>
 			getRequest(URL, ''),
 		//userById: (_, { id }) =>
 		//	generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createaUser: (_, { user }) =>
-			generalRequest(`${URL}/new`, 'POST', user),
-		//updateUser: (_, { id, user }) =>
-		//	generalRequest(`${URL}/${id}`, 'PUT', user),
-		//deleteUser: (_, { id }) =>
-		//	generalRequest(`${URL}/${id}`, 'DELETE')
+		createSchedule: (_, { sch }) =>
+			generalRequest(`${URL}/new`, 'POST', sch),
+		updateUser: (_, { id, sch }) =>
+			generalRequest(`${URL}/${id}`, 'PUT', sch),
+		deleteUser: (_, { id }) =>
+			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };
 
