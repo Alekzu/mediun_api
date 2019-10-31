@@ -1,12 +1,5 @@
 export const cryptoTypeDef = `
 
-scalar Date
-
-type MyType {
-   created: Date
-}
-
-
 type Crypto {
     user: String!
     date: Date!
