@@ -2,18 +2,18 @@ export const cryptoTypeDef = `
 
 type Crypto {
     user: String!
-    date: Date!
-    created: Date!
+    date: String!
+    created: String!
     key: String!
 }
 input FilterInput {
-    adate: Date!
-    bdate: Date!
+    adate: String!
+    bdate: String!
 }
 input CryptoInput {
     user: String!
-    date: Date!
-    created: Date!
+    date: String!
+    created: String!
     key: String!
 }`;
 
