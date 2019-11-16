@@ -65,7 +65,6 @@ const mergedTypeDefs = mergeSchemas(
 		notifTypeDef,
 		appointmentTypeDef,
 		excusesTypeDef,
-		usersTypeDef,
 	],
 	[
 		cryptoQueries,
@@ -98,6 +97,5 @@ export default makeExecutableSchema({
 		notifResolvers,
 		appointmentResolvers,
 		excusesResolvers,
-		usersResolvers,
 	)
 });
