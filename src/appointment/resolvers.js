@@ -7,14 +7,14 @@ const resolvers = {
 	Query: {
 		allschedules: (_) =>
 			getRequest(URL, ''),
-		//userById: (_, { id }) =>
-		//	generalRequest(`${URL}/${id}`, 'GET'),
+		scheduleById: (_, { id }) =>
+			generalRequest(`${URL}/${id}`, 'GET'),
 	},
 	Mutation: {
-		createSchedule: (_, { sch }) =>
-			generalRequest(`${URL}/new`, 'POST', sch),
+		createSchedule: (_, { schedule }) =>
+			generalRequest(`${URL}/new`, 'POST', schedule),
 		updateSchedule: (_, { id, sch }) =>
-			generalRequest(`${URL}/${id}`, 'PUT', sch),
+			generalRequest(`${URL}/${id}`, 'PUT', schedule),
 		deleteSchedule: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE')
 	}

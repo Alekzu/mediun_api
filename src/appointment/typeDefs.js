@@ -17,7 +17,8 @@ input aScheduleInput {
 }`;
 
 export const appointmentQueries = `
-    allschedules: [schedule]!
+    allschedules: schedule!
+    scheduleById(id: Int!): schedule!
 `;
 
 export const appointmentMutations = `
