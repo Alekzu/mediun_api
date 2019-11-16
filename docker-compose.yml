@@ -6,7 +6,7 @@ services:
       PORT: '5000'
       SHOW_URLS: 'true'
       COMMON_URL: '192.168.0.13'
-      
+
       #MS_CRYPTO_VARIABLES
       CRYPTO_URL: '35.240.32.29'
       CRYPTO_PORT: '5001'
@@ -16,11 +16,12 @@ services:
       CONFIRMATION_PORT: '5002'
       CONFIRMATION_USERS_ENTRY: 'api/confirmation'
       #MS_AUTH_VARIABLES
-      AUTH_URL: '192.168.0.14'
+      AUTH_URL: '35.238.81.164'
       AUTH_PORT: '5003'
-      AUTH_ENTRY: 'sa-auth-ms/resources/users'
+      AUTH_ENTRY: 'auth'
+      USERS_ENTRY: 'users'    
       #MS_NOTIF_VARIABLES
-      NOTIF_URL: '35.234.173.101'
+      NOTIF_URL:  '35.234.173.101'
       NOTIF_PORT: '5004'
       NOTIF_ENTRY: 'users'
       #MS_APPOINTMENT_VARIABLES

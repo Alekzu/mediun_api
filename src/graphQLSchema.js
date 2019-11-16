@@ -15,12 +15,18 @@ import {
 	confirmationQueries,
 	confirmationTypeDef
 } from './confirmation/typeDefs';
-//auth
+// authentication/auth
+mport {
+    sessionsMutations,
+    sessionQueries,
+    sessionsTypeDef
+} from './authentication/auth/authtypeDef';
+
+// authentication/users
 import {
-	authMutations,
-	authQueries,
-	authTypeDef
-} from './auth/typeDefs';
+	userTypeDef,
+	userQueries
+} from './authentication/user/usertypeDef';
 //notif
 import {
 	notifMutations,
@@ -39,20 +45,14 @@ import {
 	excusesQueries,
 	excusesTypeDef
 } from './excuses/typeDefs';
-//users
-import {
-	usersMutations,
-	usersQueries,
-	usersTypeDef
-} from './users/typeDefs';
 
 import cryptoResolvers from './crypto/resolvers';
 import confirmationResolvers from './confirmation/resolvers';
-import authResolvers from './auth/resolvers';
+import authResolvers from './authentication/auth/authresolvers';
+import userResolvers from './authentication/user/userresolvers';
 import notifResolvers from './notif/resolvers';
 import appointmentResolvers from './appointment/resolvers';
 import excusesResolvers from './excuses/resolvers';
-import usersResolvers from './users/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -60,7 +60,8 @@ const mergedTypeDefs = mergeSchemas(
 		'scalar JSON',
 		cryptoTypeDef,
 		confirmationTypeDef,
-		authTypeDef,
+		sessionsTypeDef,
+		userTypeDef,
 		notifTypeDef,
 		appointmentTypeDef,
 		excusesTypeDef,
@@ -69,20 +70,19 @@ const mergedTypeDefs = mergeSchemas(
 	[
 		cryptoQueries,
 		confirmationQueries,
-		authQueries,
+		sessionQueries,
+		userQueries,
 		notifQueries,
 		appointmentQueries,
 		excusesQueries,
-		usersQueries,
 	],
 	[
 		cryptoMutations,
 		confirmationMutations,
-		authMutations,
+		sessionsMutations,
 		notifMutations,
 		appointmentMutations,
 		excusesMutations,
-		usersMutations,
 	]
 );
 
@@ -94,6 +94,7 @@ export default makeExecutableSchema({
 		cryptoResolvers,
 		confirmationResolvers,
 		authResolvers,
+		userResolvers,
 		notifResolvers,
 		appointmentResolvers,
 		excusesResolvers,
