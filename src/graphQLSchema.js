@@ -16,7 +16,7 @@ import {
 	confirmationTypeDef
 } from './confirmation/typeDefs';
 // authentication/auth
-mport {
+import {
     sessionsMutations,
     sessionQueries,
     sessionsTypeDef
