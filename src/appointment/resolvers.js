@@ -14,10 +14,10 @@ const resolvers = {
 			generalRequest(`${URL}/${id}`, 'GET'),
 		scheduleByPatient: (_, { patient }) =>
 			generalRequest(`${URLsub}/getAllByPatient?patient=${patient}`, ''),
-		assignSchedule: (_, { id }, { patient }) => //actually a mutation disguised
-				generalRequest(`${URLsub}/schedule?id=${id}&patient=${patient}`, 'GET'),
 	},
 	Mutation: {
+		assignSchedule: (_, { id, patient }) =>
+				generalRequest(`${URLsub}/schedule?id=${id}&patient=${patient}`, 'POST'),
 		createSchedule: (_, { sch }) =>
 			generalRequest(`${URL}/new`, 'POST', sch),
 		updateSchedule: (_, { id, sch }) =>
