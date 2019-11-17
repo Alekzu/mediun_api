@@ -10,8 +10,8 @@ const resolvers = {
 			getRequest(`${URLsub}/getAll`, ''),
 		scheduleById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
-		scheduleByPatient: (_, { id }) =>
-			generalRequest(`${URLsub}/getAllByPatient?patient=${id}`, 'GET'),
+		scheduleByPatient: (_, { patient }) =>
+			generalRequest(`${URLsub}/getAllByPatient?patient=${patient}`, ''),
 	},
 	Mutation: {
 		createSchedule: (_, { sch }) =>
