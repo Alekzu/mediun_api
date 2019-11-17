@@ -1,27 +1,27 @@
 export const cryptoTypeDef = `
 
-type Crypto {
-    user: String!
-    date: String!
-    created: String!
-    key: String!
+type CryptoO {
+    _id: String!
+    usero: String!
+    dateo: String!
+    createdo: String!
+    keyo: String!
 }
-input FilterInput {
+input Filter {
+    user: String!
     adate: String!
     bdate: String!
 }
-input CryptoInput {
+input Crypto {
     user: String!
     date: String!
-    created: String!
-    key: String!
 }`;
 
 export const cryptoQueries = `
-    allCryptos: [Crypto]!
-    cryptosbyDate(dates: FilterInput!): [Crypto]!
+    allCryptos: [CryptoO]!
+    cryptosbyDate(filter: Filter!): [CryptoO]!
 `;
 
 export const cryptoMutations = `
-    createCrypto(crypto: CryptoInput!): Crypto!
+    createCrypto(crypto: Crypto!): [CryptoO]!
 `;
