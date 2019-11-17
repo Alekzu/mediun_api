@@ -19,6 +19,7 @@ input aScheduleInput {
 export const appointmentQueries = `
     allschedules: [schedule]!
     scheduleById(id: String!): schedule!
+    scheduleByPatient(id: String!): schedule!
 `;
 
 export const appointmentMutations = `

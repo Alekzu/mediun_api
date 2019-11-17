@@ -2,7 +2,7 @@ import { generalRequest, getRequest } from '../utilities';
 import { url, port, entryPoint } from './server';
 
 const URL = `http://${url}:${port}/${entryPoint}`;
-const URLsub = `http://${url}:${port}`;
+const URLsub = `http://${url}:${port}`; //without default entrypoint
 
 const resolvers = {
 	Query: {
@@ -10,6 +10,8 @@ const resolvers = {
 			getRequest(`${URLsub}/getAll`, ''),
 		scheduleById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
+		scheduleByPatient: (_, { id }) =>
+			generalRequest(`${URLsub}/getAllByPatient?patient=${id}`, 'GET'),
 	},
 	Mutation: {
 		createSchedule: (_, { sch }) =>
