@@ -8,12 +8,14 @@ const resolvers = {
 	Query: {
 		allschedules: (_) =>
 			getRequest(`${URLsub}/getAll`, ''),
+		availableSchedules: (_) =>
+				getRequest(`${URLsub}/getAllByAvailable`, ''),
 		scheduleById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
 		scheduleByPatient: (_, { patient }) =>
 			generalRequest(`${URLsub}/getAllByPatient?patient=${patient}`, ''),
 		assignSchedule: (_, { id }, { patient }) => //actually a mutation disguised
-				generalRequest(`${URLsub}/schedule?id=${id}&patient=${patient}`, ''),
+				generalRequest(`${URLsub}/schedule?id=${id}&patient=${patient}`, 'GET'),
 	},
 	Mutation: {
 		createSchedule: (_, { sch }) =>

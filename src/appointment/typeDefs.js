@@ -18,6 +18,7 @@ input aScheduleInput {
 
 export const appointmentQueries = `
     allschedules: [schedule]!
+    availableSchedules: [schedule]!
     scheduleById(id: String!): schedule!
     scheduleByPatient(patient: String!): [schedule]!
     assignSchedule(id: String!, patient: String!): schedule
