@@ -1,11 +1,11 @@
 export const appointmentTypeDef = `
 type schedule {
-    patient: String!
-    date: String!
-    doctor: String!
-    specialism: String!
-    code: String!
-    available: Boolean!
+    patient: String
+    date: String
+    doctor: String
+    specialism: String
+    code: String
+    available: Boolean
 }
 input aScheduleInput {
     patient: String!
@@ -17,7 +17,7 @@ input aScheduleInput {
 }`;
 
 export const appointmentQueries = `
-    allschedules: schedule!
+    allschedules: [schedule]!
     scheduleById(id: Int!): schedule!
 `;
 
