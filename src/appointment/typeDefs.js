@@ -1,5 +1,6 @@
 export const appointmentTypeDef = `
 type schedule {
+    id: String
     patient: String
     date: String
     doctor: String
@@ -8,6 +9,7 @@ type schedule {
     available: Boolean
 }
 input aScheduleInput {
+    id: String!
     patient: String!
     date: String!
     doctor: String!
