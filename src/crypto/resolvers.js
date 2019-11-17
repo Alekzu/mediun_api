@@ -9,8 +9,8 @@ const resolvers = {
 	Query: {
 		allCryptos: (_) =>
 			generalRequest(`${URL}`, 'GET'),
-		cryptosbyDate: (_, { dates }) =>
-			generalRequest(`${URL}/{id:[0-9]+}`, 'GET', dates),
+		cryptosbyDate: (_, { filter }) =>
+			generalRequest(`${URL}/filter`, 'GET'),
 	},
 	Mutation: {
 		createCrypto: (_, { crypto }) =>
