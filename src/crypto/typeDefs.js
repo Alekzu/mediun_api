@@ -19,9 +19,9 @@ input Crypto {
 
 export const cryptoQueries = `
     allCryptos: [CryptoO]!
-    cryptosbyDate(filter: Filter!): [CryptoO]!
 `;
 
 export const cryptoMutations = `
     createCrypto(crypto: Crypto!): [CryptoO]!
+    cryptosbyDate(filter: Filter!): [CryptoO]!
 `;
