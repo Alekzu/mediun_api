@@ -20,11 +20,11 @@ mutation{
 }
 
 * Iniciar Sesion
-Usuario por defecto ercruzr@unal.edu.co
+Usuario por defecto jufcardenasmo@unal.edu.co
 
 mutation{
   createSession(session: {
-	email: "ercruzr@unal.edu.co"
+	email: "jufcardenasmo@unal.edu.co"
 	password: "123456"
 	}) {
 	id
@@ -51,7 +51,7 @@ query{
 query{
 	validateToken(headers: {
 	token: "fP5AaYSmWTxkPeXC4JyAug"
-	uid: "ercruzr@unal.edu.co"
+	uid: "jufcardenasmo@unal.edu.co"
 	client: "oMamwjXeVnHgQ-0BbeLyYw"
 	}) {
 	id

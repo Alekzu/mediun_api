@@ -26,7 +26,7 @@ export const appointmentQueries = `
 `;
 
 export const appointmentMutations = `
-    assignSchedule(id: String!, patient: String!): schedule
+    assignSchedule(id: String!, patient: String!): String!
     createSchedule(sch: aScheduleInput!): schedule!
     updateSchedule(id: String!, sch: aScheduleInput!): schedule!
     deleteSchedule(id: String!): Int!

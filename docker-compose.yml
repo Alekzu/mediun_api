@@ -16,10 +16,10 @@ services:
       CONFIRMATION_PORT: '5002'
       CONFIRMATION_USERS_ENTRY: 'api/confirmation'
       #MS_AUTH_VARIABLES
-      AUTH_URL: '35.238.81.164'
+      AUTH_URL: '35.226.188.252' #'192.168.0.17'
       AUTH_PORT: '5003'
       AUTH_ENTRY: 'auth'
-      USERS_ENTRY: 'users'    
+      USERS_ENTRY: 'users'
       #MS_NOTIF_VARIABLES
       NOTIF_URL:  '35.234.173.101'
       NOTIF_PORT: '5004'
