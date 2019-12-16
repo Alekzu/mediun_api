@@ -1,32 +1,41 @@
 export const excusesTypeDef = `
 type Excuse {
-	id: Int!
-    code: Int!
-    dias_incapacidad: Int!
-    fecha: String!
-    hora: String!
-    nombre_medico: String!
-    nombre_paciente: String!
-    razon: String!
+	id_user: String
+	patient_name: String
+	doctor_name: String
+	reason: String
+	inability_days: Int
+}
+type Excuseresp{
+	_id: Int
+	fecha: String
+	hora: String
+	id_usuario: String
+	nombre_paciente: String
+	nombre_medico: String
+	razon: String
+	dias_incapacidad: Int
+	codigo: String
+}
+type Response {
+	Mensaje: String
 }
 input ExcuseInput {
-    id: Int!
-    code: Int!
-    dias_incapacidad: Int!
-    fecha: String!
-    hora: String!
-    nombre_medico: String!
-    nombre_paciente: String!
-    razon: String!
+    id_user: String!
+		patient_name: String!
+		doctor_name: String!
+		reason: String!
+		inability_days: Int!
+
 }`;
 
 export const excusesQueries = `
-    allExcuses: [Excuse]!
+    allExcuses: [Excuseresp]
     excuseById(id: Int!): Excuse!
 `;
 
 export const excusesMutations = `
-    createExcuse(excuse: ExcuseInput!): Excuse!
+    createExcuse(excuse: ExcuseInput!): Response
     updateExcuse(id: Int!, excuse: ExcuseInput!): Excuse!
     deleteExcuse(id: Int!): Int
 `;

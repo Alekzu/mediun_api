@@ -6,13 +6,13 @@ const URL = `http://${url}:${port}/${entryPoint}`;
 const resolvers = {
 	Query: {
 		allExcuses: (_) =>
-			getRequest(URL, ''),
-		excuseById: (_, { id }) =>
-			generalRequest(`${URL}/${id}`, 'GET'),
+			//getRequest(URL, ''),
+			//getRequest(`${URL}`, ''),
+			generalRequest(`${URL}`, 'GET'),//use this
 	},
 	Mutation: {
 		createExcuse: (_, { excuse }) =>
-			generalRequest(`${URL}/new`, 'POST', excuse),
+			generalRequest(`${URL}`, 'POST', excuse),
 		updateExcuse: (_, { id, excuse }) =>
 		generalRequest(`${URL}/${id}`, 'PUT', excuse),
 		deleteExcuse: (_, { id }) =>
